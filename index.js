@@ -27,7 +27,7 @@ const circle = createCircle(1);
 //Constructor Function
 
 //esta função é definida com primeira letra maiuscula
-//this é referencia para o object que está a executar esta peça de código, por default this aponta para um objeto global
+//this é referencia para o object que está a executar esta peça de código, por default this aponta para um objeto global (tipo a window)
 function Circle(radius) {
         this.radius = radius;
         this.draw = function() {
@@ -35,4 +35,5 @@ function Circle(radius) {
         }
 }
 
-const another = new Circle(1); // Quando usamos o "new", estamos a criar um novo objeto e a atribuir-lhe o this e retorna automaticamente o objeto da função
+const another = new Circle(1); 
+// Quando usamos o "new", estamos a criar um novo objeto e a atribuir-lhe o this e retorna automaticamente o objeto da função, esquecer o new quebra o uso da função e gera bugs
